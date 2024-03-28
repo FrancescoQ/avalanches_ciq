@@ -3,30 +3,29 @@ import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.Lang;
 
-class ainevaAutoDataView extends WatchUi.View {
-
-    var ainevaJSONData = null;
+class ainevaAutoDataView extends avalanchesDataView {
 
     function initialize() {
-        View.initialize();
-    }
-
-    function onReceive(response as Lang.Number, responseData as Null or Lang.Dictionary or Lang.String) as Void {
-        ainevaJSONData = responseData;
-        WatchUi.requestUpdate();
+        avalanchesDataView.initialize();
     }
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.ArpavDataView(dc));
 
+        // Falcade
+        // $y = 46.358439;
+        // $x = 11.872381;
+
         Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, null);
         var info = Position.getInfo();
         var currentLocation = info.position.toDegrees();
        /*  System.println("Latitude: " + myLocation[0]); // e.g. 38.856147
         System.println("Longitude: " + myLocation[1]); // e.g -94.800953 */
+        var y = currentLocation[0];
+        var x = currentLocation[1];
 
-        var url = "https://nvdata.ddev.site/aineva/coordinates/" + currentLocation[0] + "/" + currentLocation[1];
+        var url = self.baseUrl + "/aineva/coordinates/" + x + "/" + y;
 
         var params = null;
 
@@ -45,10 +44,6 @@ class ainevaAutoDataView extends WatchUi.View {
         drw.setText("AINEVA!");
     }
 
-    function onBack() {
-        WatchUi.switchToView(new avalanchesView(), null, WatchUi.SLIDE_IMMEDIATE);
-    }
-
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
@@ -58,7 +53,7 @@ class ainevaAutoDataView extends WatchUi.View {
     // Update the view
     function onUpdate(dc as Dc) as Void {
         // any dc calls related to the layout should appear before View.onUpdate();
-        if (ainevaJSONData != null) {
+        if (responseJSONData != null) {
             //var text = ainevaJSONData[0]["login"];
             var drw = self.findDrawableById("mylabel") as Text;
             drw.setBackgroundColor(Graphics.COLOR_RED);

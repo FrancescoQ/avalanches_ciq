@@ -3,25 +3,17 @@ import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.Lang;
 
-class arpavDataView extends WatchUi.View {
+class arpavDataView extends avalanchesDataView {
 
-    var arpavJSONData = null;
-
-    function initialize(data) {
-        View.initialize();
-    }
-
-    function onReceive(response as Lang.Number, responseData as Null or Lang.Dictionary or Lang.String) as Void {
-        arpavJSONData = responseData;
-        WatchUi.requestUpdate();
+    function initialize() {
+        avalanchesDataView.initialize();
     }
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.ArpavDataView(dc));
-
-        var url = "https://meteo.arpa.veneto.it/meteo/bollettini_nv/it/xml/dolomiti_nevevalanghe.xml";
-        url = "https://api.github.com/users/hadley/orgs";
+        //var url = "https://api.github.com/users/hadley/orgs";
+        var url = self.baseUrl + "/arpav";
         var params = null;
 
         var options = {
@@ -39,10 +31,6 @@ class arpavDataView extends WatchUi.View {
         drw.setText("text changed in 'onLayout'");
     }
 
-    function onBack() {
-        WatchUi.switchToView(new avalanchesView(), null, WatchUi.SLIDE_IMMEDIATE);
-    }
-
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
@@ -52,8 +40,8 @@ class arpavDataView extends WatchUi.View {
     // Update the view
     function onUpdate(dc as Dc) as Void {
         // any dc calls related to the layout should appear before View.onUpdate();
-        if (arpavJSONData != null) {
-            var text = arpavJSONData[0]["login"];
+        if (responseJSONData != null) {
+            var text = responseJSONData[0]["login"];
             var drw = self.findDrawableById("mylabel") as Text;
             drw.setBackgroundColor(Graphics.COLOR_RED);
             drw.setText(text);
