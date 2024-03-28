@@ -1,0 +1,9 @@
+<layout id="ArpavDataView">
+    <text-area id="BlockOfText" text="@Strings.arpavData" x="10%" y="10%" width="80%" height="80%">
+    <fonts>
+        <font>Gfx.FONT_MEDIUM</font>
+        <font>Gfx.FONT_XTINY</font>
+    </fonts>
+</text-area>
+
+</layout>

@@ -1,0 +1,19 @@
+<strings>
+    <string id="AppName">NeveValanghe</string>
+
+    <string id="prompt">Click the menu button</string>
+
+    <string id="arpav">ARPAV</string>
+    <string id="aineva_manual">Aineva (manuale)</string>
+    <string id="aineva_location">Aineva (gps)</string>
+
+    <string id="arpavData">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed tempus elit. Donec non magna sollicitudin, feugiat metus sit amet, pellentesque purus. Nam nec condimentum orci. Duis sit amet interdum mauris. Integer luctus nunc lorem, eu bibendum massa suscipit scelerisque. In hac habitasse platea dictumst. Cras in arcu pellentesque, pulvinar nisl nec, volutpat urna. In finibus aliquam diam. Pellentesque et fermentum neque. Integer quis sem vel felis porttitor imperdiet. Vestibulum tempus suscipit mattis. Donec nisi ipsum, vestibulum id malesuada et, tristique at quam. Nunc facilisis ipsum lectus, vel scelerisque neque commodo sed. Curabitur pellentesque ac mauris at interdum.
+
+Ut consectetur et lorem pellentesque vulputate. Donec vitae faucibus diam. Curabitur convallis odio in metus pretium lacinia ut in sem. Ut iaculis quam eros, vel molestie nisl ullamcorper ut. Sed varius dolor vitae enim aliquam, vitae finibus leo porta. Phasellus aliquam placerat dictum. Nullam mauris massa, convallis eget sollicitudin sed, laoreet eu enim. Nulla aliquam semper justo, eu molestie dui molestie id. Pellentesque sed feugiat nisi, eu pulvinar turpis. Aliquam molestie libero ut mi vestibulum sagittis. Suspendisse rutrum velit quis auctor interdum.
+
+Fusce vel nisl nec nisl mattis vestibulum. Phasellus porta pellentesque purus, eget scelerisque libero hendrerit a. Suspendisse mattis fringilla velit sed consequat. Quisque ac scelerisque tellus, nec suscipit nisl. Integer sodales sem vel justo gravida, at aliquet tortor lobortis. Praesent ut nulla scelerisque, rutrum orci sit amet, porta dolor. Sed ut consectetur velit. Praesent sed eros consectetur, malesuada orci at, fermentum dolor. Etiam non ante ac quam tempor placerat.
+
+Sed porta urna libero, quis molestie lacus suscipit eget. Aliquam erat volutpat. Integer volutpat eu erat non feugiat. Praesent hendrerit ut nibh scelerisque maximus. Sed lacus ligula, mollis in nulla quis, cursus semper lacus. Ut vel malesuada nisi. Etiam nec sem mi. Etiam scelerisque dui et odio porttitor bibendum. Fusce vitae dui vitae sem egestas feugiat at vel lectus. Integer vel tellus eget dolor porttitor bibendum sit amet eget metus. Fusce egestas maximus leo, at congue purus convallis a. Morbi ex arcu, dapibus quis ultricies quis, mollis eget mi. Morbi sed nulla viverra, ultrices magna in, interdum libero. Phasellus quis pretium mauris, vitae molestie odio. Phasellus quis aliquet massa, eu tristique risus. Nulla porttitor blandit nulla sit amet laoreet.
+
+Mauris commodo sodales leo dapibus ullamcorper. Nulla lectus sem, finibus ut odio id, tincidunt condimentum felis. Nullam quis nisl lobortis, rhoncus odio ut, congue eros. Nam enim justo, consectetur a vulputate a, auctor ut turpis. Nam id massa commodo, euismod diam aliquam, sollicitudin enim. In hac habitasse platea dictumst. Sed nec odio sed mauris tempor pharetra. Fusce massa dui, maximus quis ullamcorper in, pharetra vitae ex. Suspendisse potenti. Donec pharetra, mauris ut lacinia hendrerit, augue eros posuere magna, ac auctor velit lorem imperdiet nibh. Donec vel lacus enim. Integer in quam eu ipsum tempor laoreet. Integer in ante hendrerit, accumsan turpis nec, tincidunt mauris. Curabitur consequat tristique dolor sed efficitur. Praesent bibendum sollicitudin pulvinar. Sed non euismod quam, sit amet pellentesque ante.</string>
+</strings>

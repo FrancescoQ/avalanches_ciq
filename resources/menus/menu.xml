@@ -1,0 +1,5 @@
+<menu id="MainMenu">
+    <menu-item id="arpav" label="@Strings.arpav" />
+    <menu-item id="aineva_manual" label="@Strings.aineva_manual" />
+    <menu-item id="aineva_location" label="@Strings.aineva_location" />
+</menu>
