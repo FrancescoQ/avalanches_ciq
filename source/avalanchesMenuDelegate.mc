@@ -12,9 +12,9 @@ class avalanchesMenuDelegate extends WatchUi.MenuInputDelegate {
 
     function onMenuItem(item as Symbol) as Void {
         if (item == :arpav) {
-            WatchUi.switchToView(new arpavDataView(), null, WatchUi.SLIDE_RIGHT);
+            WatchUi.switchToView(new arpavDataView(), new avalanchesBaseDelegate(), WatchUi.SLIDE_DOWN);
         } else if (item == :aineva_location) {
-            WatchUi.switchToView(new ainevaAutoDataView(), null, WatchUi.SLIDE_RIGHT);
+            WatchUi.switchToView(new ainevaAutoDataView(), new avalanchesBaseDelegate(), WatchUi.SLIDE_DOWN);
         }
         else if (item == :aineva_manual) {
         }

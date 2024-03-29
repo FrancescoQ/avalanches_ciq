@@ -18,9 +18,12 @@ class avalanchesDataView extends WatchUi.View {
             responseJSONData = responseData;
             WatchUi.requestUpdate();
         }
+        else {
+            WatchUi.switchToView(new avalanchesErrorView("Error " + responseCode + " while fetching data"), new avalanchesBaseDelegate(), WatchUi.SLIDE_DOWN);
+        }
     }
 
     function onBack() {
-        WatchUi.switchToView(new avalanchesView(), null, WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.switchToView(new avalanchesView(), null, WatchUi.SLIDE_LEFT);
     }
 }

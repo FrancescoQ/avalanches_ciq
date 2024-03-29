@@ -1,24 +1,30 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
+import Toybox.Lang;
 
-class avalanchesView extends WatchUi.View {
+class avalanchesErrorView extends WatchUi.View {
 
-    function initialize() {
+    var errorMessage = null;
+
+    function initialize(error) {
         View.initialize();
+        errorMessage = error;
     }
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        setLayout(Rez.Layouts.ErrorLayout(dc));
+
+        if (errorMessage) {
+          var errorElement = self.findDrawableById("ErrorMessage") as TextArea;
+          errorElement.setText(errorMessage);
+        }
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
-    }
-
-    function onBack() as Void {
     }
 
     // Update the view
@@ -33,4 +39,8 @@ class avalanchesView extends WatchUi.View {
     function onHide() as Void {
     }
 
+    function onMenu() as Boolean {
+      WatchUi.pushView(new Rez.Menus.MainMenu(), new avalanchesMenuDelegate(), WatchUi.SLIDE_UP);
+      return true;
+    }
 }
